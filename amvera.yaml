@@ -1,0 +1,15 @@
+runtime: nodejs
+nodejs_version: 20
+
+build:
+  commands:
+    - npm ci
+    - npm run build
+
+start:
+  command: npm run start
+
+env:
+  NODE_ENV: production
+  NEXT_TELEMETRY_DISABLED: 1
+
