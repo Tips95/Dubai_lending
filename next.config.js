@@ -3,8 +3,10 @@ const nextConfig = {
   images: {
     domains: ['images.unsplash.com'],
   },
-  // Standalone режим только для production Docker
-  ...(process.env.NODE_ENV === 'production' && process.env.DOCKER === 'true' ? { output: 'standalone' } : {}),
+  // Для Timeweb Cloud и других платформ
+  output: 'standalone',
+  // Убеждаемся что приложение работает на правильном порту
+  ...(process.env.PORT ? {} : {}),
 }
 
 module.exports = nextConfig 
