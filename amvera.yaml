@@ -1,15 +1,21 @@
-runtime: nodejs
-nodejs_version: 20
-
+meta:
+  environment: node
+  toolchain:
+    name: npm
+    version: "20"
 build:
-  commands:
-    - npm ci
-    - npm run build
-
-start:
+  skip: false
+  additionalCommands: null
+  artifacts:
+    "*": /
+run:
+  scriptName: null
+  scriptArguments: null
+  nodeArguments: null
   command: npm run start
-
+  persistenceMount: /data
+  containerPort: "3000"
 env:
   NODE_ENV: production
   NEXT_TELEMETRY_DISABLED: 1
-
+  PORT: 3000
