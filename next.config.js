@@ -2,9 +2,12 @@
 const nextConfig = {
   images: {
     domains: ['images.unsplash.com'],
+    unoptimized: true, // Для статического экспорта
   },
-  // Standalone режим для Docker (Timeweb Cloud)
-  output: 'standalone',
+  // Статический экспорт для Timeweb Cloud (они ожидают index.html)
+  output: 'export',
+  // Отключаем trailing slash для совместимости
+  trailingSlash: false,
 }
 
 module.exports = nextConfig
