@@ -3,8 +3,8 @@ const nextConfig = {
   images: {
     domains: ['images.unsplash.com'],
   },
-  // Не используем standalone режим - он вызывает проблемы на Timeweb Cloud
-  // Используем стандартную сборку Next.js
+  // Standalone режим для Docker (Timeweb Cloud)
+  output: 'standalone',
 }
 
 module.exports = nextConfig
