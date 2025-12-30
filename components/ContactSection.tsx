@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, FormEvent } from 'react'
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -11,11 +11,15 @@ export default function ContactSection() {
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     // Здесь будет логика отправки формы
-    console.log('Form submitted:', formData)
+    // В production здесь будет отправка на API
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Form submitted:', formData)
+    }
     setIsSubmitted(true)
+    setFormData({ name: '', phone: '', email: '', message: '' })
     setTimeout(() => setIsSubmitted(false), 5000)
   }
 

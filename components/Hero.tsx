@@ -1,15 +1,19 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, FormEvent } from 'react'
 
 export default function Hero() {
   const [formData, setFormData] = useState({ name: '', phone: '' })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     // Здесь будет логика отправки формы
-    console.log('Form submitted:', formData)
+    // В production здесь будет отправка на API
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Form submitted:', formData)
+    }
     alert('Спасибо! Мы свяжемся с вами в ближайшее время.')
+    setFormData({ name: '', phone: '' })
   }
 
   return (
