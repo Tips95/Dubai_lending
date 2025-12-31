@@ -6,37 +6,31 @@ export default function EarningsSection() {
       type: 'Студия (Studio)',
       range: '$4 000 – $5 000',
       average: 'за одну продажу',
-      icon: '🏠',
     },
     {
       type: '1 Bedroom',
       range: '$7 000 – $15 000',
       average: 'в среднем около $10 000 за сделку',
-      icon: '🏡',
     },
     {
       type: '2 Bedroom',
       range: '$15 000 – $25 000',
       average: 'за одну продажу',
-      icon: '🏘️',
     },
     {
       type: '3 Bedroom',
       range: '$35 000 – $40 000',
       average: 'за одну продажу',
-      icon: '🏛️',
     },
     {
       type: 'Пентхаус',
       range: 'от $50 000',
       average: 'может достигать $70k, $100k и выше',
-      icon: '🏰',
     },
     {
       type: 'Виллы',
       range: 'от $20 000 – $30 000',
       average: 'могут доходить до сотен тысяч долларов',
-      icon: '🏖️',
     },
   ]
 
@@ -58,8 +52,7 @@ export default function EarningsSection() {
               key={index}
               className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all hover:bg-white/10"
             >
-              <div className="text-4xl mb-4">{item.icon}</div>
-              <h3 className="text-xl font-bold text-white mb-2">{item.type}</h3>
+              <h3 className="text-xl font-bold text-white mb-2 uppercase">{item.type}</h3>
               <div className="text-2xl font-bold gradient-text-purple-pink mb-1">{item.range}</div>
               <p className="text-gray-300 text-sm">{item.average}</p>
             </div>
@@ -78,21 +71,17 @@ export default function EarningsSection() {
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-6">
               <h4 className="text-2xl font-bold mb-4">Мы работаем вместе:</h4>
               <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="text-gold-400">✓</span>
-                  <span>Даём сделки</span>
+                <li className="flex items-start">
+                  <span className="font-bold uppercase">Даём сделки</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-gold-400">✓</span>
-                  <span>Даём 10 лидов во время обучения</span>
+                <li className="flex items-start">
+                  <span className="font-bold uppercase">Даём 10 лидов во время обучения</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-gold-400">✓</span>
-                  <span>Обучаем и сопровождаем</span>
+                <li className="flex items-start">
+                  <span className="font-bold uppercase">Обучаем и сопровождаем</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-gold-400">✓</span>
-                  <span>Вместе закрываем продажи</span>
+                <li className="flex items-start">
+                  <span className="font-bold uppercase">Вместе закрываем продажи</span>
                 </li>
               </ul>
             </div>
@@ -100,25 +89,20 @@ export default function EarningsSection() {
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-6">
               <h4 className="text-2xl font-bold mb-4">Итог для каждого студента:</h4>
               <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="text-gold-400">1️⃣</span>
-                  <span>Учитесь профессии</span>
+                <li className="flex items-start">
+                  <span className="font-bold uppercase">Учитесь профессии</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-gold-400">2️⃣</span>
-                  <span>С первого дня есть возможность зарабатывать реальные деньги</span>
+                <li className="flex items-start">
+                  <span className="font-bold uppercase">С первого дня есть возможность зарабатывать реальные деньги</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-gold-400">3️⃣</span>
-                  <span>Получаете поддержку команды</span>
+                <li className="flex items-start">
+                  <span className="font-bold uppercase">Получаете поддержку команды</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-gold-400">4️⃣</span>
-                  <span>Получаете объекты из базы StepDream</span>
+                <li className="flex items-start">
+                  <span className="font-bold uppercase">Получаете объекты из базы StepDream</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-gold-400">5️⃣</span>
-                  <span>Входите в рынок Дубая с нашим опытом</span>
+                <li className="flex items-start">
+                  <span className="font-bold uppercase">Входите в рынок Дубая с нашим опытом</span>
                 </li>
               </ul>
             </div>
