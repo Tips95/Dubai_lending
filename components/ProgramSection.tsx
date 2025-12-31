@@ -79,34 +79,34 @@ export default function ProgramSection() {
   return (
     <section id="program" className="section-padding bg-black text-white">
       <div className="container-custom">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-6 sm:mb-8 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
             Что вы получаете за эти деньги
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
             Полный комплекс услуг для старта успешной карьеры брокера по зарубежной недвижимости
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:bg-white/10"
+              className="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:bg-white/10"
             >
-              <h3 className="text-xl font-bold text-white mb-2 uppercase">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 uppercase">
                 {benefit.title}
               </h3>
-              <p className="text-gray-300">{benefit.description}</p>
+              <p className="text-sm sm:text-base text-gray-300">{benefit.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-5 md:p-8 text-white text-center">
-          <h3 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="mt-6 sm:mt-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-4 sm:p-5 md:p-8 text-white text-center px-4">
+          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
             Введение в профессию «Брокер по зарубежной недвижимости»
           </h3>
-          <p className="text-xl md:text-2xl opacity-90">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90">
             Начните зарабатывать уже с первого дня обучения
           </p>
         </div>

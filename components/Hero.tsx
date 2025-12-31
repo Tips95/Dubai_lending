@@ -40,23 +40,23 @@ export default function Hero() {
       <div className="container-custom relative z-10 pt-20 pb-8">
         <div className="max-w-4xl mx-auto text-center space-y-5">
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight animate-fade-in uppercase whitespace-nowrap">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight animate-fade-in uppercase px-2">
             БРОКЕР-ТУР В ДУБАЙ
           </h1>
           
           {/* Sub-headline with gradient */}
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold gradient-text-purple-pink animate-slide-up uppercase whitespace-nowrap">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold gradient-text-purple-pink animate-slide-up uppercase px-2">
             СТАНЬ УСПЕШНЫМ БРОКЕРОМ!
           </h2>
 
           {/* Description */}
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed animate-slide-up px-4" style={{ animationDelay: '0.2s' }}>
             Выездной тур в Дубай на неделю или месяц. Личное наставничество от{' '}
             <a 
               href="https://www.instagram.com/terekbaev?igsh=MXIwcG5mbjF6b240dg==" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-purple-400 hover:text-pink-400 transition-colors underline"
+              className="text-purple-400 hover:text-pink-400 transition-colors underline break-words"
             >
               Беслана Терекбаева
             </a>
@@ -64,35 +64,35 @@ export default function Hero() {
           </p>
 
           {/* Features */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-6 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-            <div className="flex items-center gap-3 text-white">
-              <svg className="w-6 h-6 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 mt-6 animate-slide-up px-4" style={{ animationDelay: '0.4s' }}>
+            <div className="flex items-center gap-2 sm:gap-3 text-white">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-lg">Наставничество 6 месяцев</span>
+              <span className="text-sm sm:text-base md:text-lg">Наставничество 6 месяцев</span>
             </div>
-            <div className="flex items-center gap-3 text-white">
-              <svg className="w-6 h-6 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <div className="flex items-center gap-2 sm:gap-3 text-white">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-lg">Реальные сделки</span>
+              <span className="text-sm sm:text-base md:text-lg">Реальные сделки</span>
             </div>
-            <div className="flex items-center gap-3 text-white">
-              <svg className="w-6 h-6 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <div className="flex items-center gap-2 sm:gap-3 text-white">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-lg">10 лидов от агентства</span>
+              <span className="text-sm sm:text-base md:text-lg">10 лидов от агентства</span>
             </div>
           </div>
         </div>
 
         {/* CTA Button at bottom */}
-        <div className="mt-8 flex justify-center animate-scale-in" style={{ animationDelay: '0.6s' }}>
+        <div className="mt-6 sm:mt-8 flex justify-center animate-scale-in px-4" style={{ animationDelay: '0.6s' }}>
           <button
             onClick={() => {
               document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
             }}
-            className="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white text-lg font-semibold hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white text-base sm:text-lg font-semibold hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
           >
             Получите бесплатную консультацию
           </button>

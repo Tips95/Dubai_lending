@@ -27,25 +27,25 @@ export default function ForWhomSection() {
   return (
     <section id="for-whom" className="section-padding bg-black text-white">
       <div className="container-custom">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-6 sm:mb-8 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
             Для кого этот брокер-тур?
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
             Программа подходит для разных категорий людей, стремящихся к успеху в недвижимости
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
           {targetAudience.map((item, index) => (
             <div
               key={index}
-              className={`relative group overflow-hidden rounded-2xl bg-gradient-to-br ${item.gradient} p-8 text-white transform hover:scale-105 transition-all duration-300 shadow-xl`}
+              className={`relative group overflow-hidden rounded-2xl bg-gradient-to-br ${item.gradient} p-5 sm:p-6 md:p-8 text-white transform hover:scale-105 transition-all duration-300 shadow-xl`}
             >
               <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors" />
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-4 uppercase">{item.title}</h3>
-                <p className="text-lg opacity-90 leading-relaxed">{item.description}</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 uppercase">{item.title}</h3>
+                <p className="text-sm sm:text-base md:text-lg opacity-90 leading-relaxed">{item.description}</p>
               </div>
             </div>
           ))}

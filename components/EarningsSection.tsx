@@ -37,39 +37,39 @@ export default function EarningsSection() {
   return (
     <section id="earnings" className="section-padding bg-black text-white">
       <div className="container-custom">
-        <div className="text-center mb-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-6 sm:mb-8 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
             Сколько вы можете зарабатывать
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
             Реальные цифры комиссий в Дубае от совместных продаж
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
           {earnings.map((item, index) => (
             <div
               key={index}
-              className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all hover:bg-white/10"
+              className="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10 hover:border-purple-500/50 transition-all hover:bg-white/10"
             >
-              <h3 className="text-xl font-bold text-white mb-2 uppercase">{item.type}</h3>
-              <div className="text-2xl font-bold gradient-text-purple-pink mb-1">{item.range}</div>
-              <p className="text-gray-300 text-sm">{item.average}</p>
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 uppercase">{item.type}</h3>
+              <div className="text-xl sm:text-2xl font-bold gradient-text-purple-pink mb-1">{item.range}</div>
+              <p className="text-gray-300 text-xs sm:text-sm">{item.average}</p>
             </div>
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-5 md:p-8 text-white">
-          <h3 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-4 sm:p-5 md:p-8 text-white">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-center px-2">
             Преференции для студентов Академии Брокеров StepDream
           </h3>
-          <p className="text-xl mb-8 text-center opacity-90">
+          <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-center opacity-90 px-2">
             Когда вы заходите к нам в Академию — вы не просто учитесь. Вы становитесь частью нашей команды и начинаете зарабатывать уже с первого дня.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6">
-              <h4 className="text-2xl font-bold mb-4">Мы работаем вместе:</h4>
+          <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6">
+              <h4 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Мы работаем вместе:</h4>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="font-bold uppercase">Даём сделки</span>
@@ -86,8 +86,8 @@ export default function EarningsSection() {
               </ul>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6">
-              <h4 className="text-2xl font-bold mb-4">Итог для каждого студента:</h4>
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6">
+              <h4 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Итог для каждого студента:</h4>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="font-bold uppercase">Учитесь профессии</span>
@@ -108,11 +108,11 @@ export default function EarningsSection() {
             </div>
           </div>
 
-          <div className="text-center">
-            <p className="text-2xl font-bold text-white mb-2">
+          <div className="text-center px-2">
+            <p className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2">
               Это не теория. Это реальные комиссии, которые получают наши брокеры уже сегодня.
             </p>
-            <p className="text-lg opacity-90">
+            <p className="text-sm sm:text-base md:text-lg opacity-90">
               Вы сразу начинаете получать реальные комиссии в долларах от совместных сделок
             </p>
           </div>

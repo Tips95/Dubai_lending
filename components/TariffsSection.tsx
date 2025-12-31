@@ -89,10 +89,10 @@ export default function TariffsSection() {
         </div>
 
         {/* Tariff Selector */}
-        <div className="flex flex-wrap justify-center gap-4 mb-6">
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-6 px-4">
           <button
             onClick={() => setSelectedTariff('week')}
-            className={`px-8 py-4 rounded-xl font-semibold transition-all ${
+            className={`w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all text-sm sm:text-base ${
               selectedTariff === 'week'
                 ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg scale-105'
                 : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
@@ -102,7 +102,7 @@ export default function TariffsSection() {
           </button>
           <button
             onClick={() => setSelectedTariff('month')}
-            className={`px-8 py-4 rounded-xl font-semibold transition-all ${
+            className={`w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all text-sm sm:text-base ${
               selectedTariff === 'month'
                 ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg scale-105'
                 : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
@@ -112,7 +112,7 @@ export default function TariffsSection() {
           </button>
           <button
             onClick={() => setSelectedTariff('vip')}
-            className={`px-8 py-4 rounded-xl font-semibold transition-all ${
+            className={`w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all text-sm sm:text-base ${
               selectedTariff === 'vip'
                 ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg scale-105'
                 : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
@@ -125,20 +125,20 @@ export default function TariffsSection() {
         {/* Tariff Card */}
         <div className="max-w-4xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden">
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-5 md:p-7 text-white">
-              <h3 className="text-3xl md:text-4xl font-bold mb-2">{currentTariff.title}</h3>
+              <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 sm:p-5 md:p-7 text-white">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">{currentTariff.title}</h3>
               <div className="flex items-baseline gap-2">
-                <span className="text-5xl md:text-6xl font-bold">{currentTariff.price}</span>
-                <span className="text-2xl">₽</span>
+                <span className="text-4xl sm:text-5xl md:text-6xl font-bold">{currentTariff.price}</span>
+                <span className="text-xl sm:text-2xl">₽</span>
               </div>
             </div>
 
-            <div className="p-5 md:p-8">
-              <h4 className="text-2xl font-bold text-white mb-6">Что входит в тариф:</h4>
-              <ul className="space-y-4">
+            <div className="p-4 sm:p-5 md:p-8">
+              <h4 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Что входит в тариф:</h4>
+              <ul className="space-y-3 sm:space-y-4">
                 {currentTariff.features.map((feature: string, index: number) => (
                   <li key={index} className="flex items-start">
-                    <span className="text-gray-300 text-lg font-bold uppercase">{feature}</span>
+                    <span className="text-gray-300 text-sm sm:text-base md:text-lg font-bold uppercase break-words">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -147,7 +147,7 @@ export default function TariffsSection() {
                 onClick={() => {
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
                 }}
-                className="mt-6 w-full py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-bold text-xl hover:from-purple-700 hover:to-pink-700 transition-colors shadow-lg hover:shadow-xl"
+                className="mt-4 sm:mt-6 w-full py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-bold text-base sm:text-lg md:text-xl hover:from-purple-700 hover:to-pink-700 transition-colors shadow-lg hover:shadow-xl"
               >
                 Записаться на программу
               </button>

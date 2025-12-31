@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import React from 'react'
 import './globals.css'
@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   title: 'Брокер-Тур в Дубай | Академия StepDream',
   description: 'Выездной тур в Дубай на неделю или месяц. Станьте успешным брокером по зарубежной недвижимости с личным наставничеством от Беслана Терекбаева.',
   keywords: 'брокер тур, Дубай, недвижимость, обучение, StepDream, брокер по недвижимости',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 }
 
 export default function RootLayout({

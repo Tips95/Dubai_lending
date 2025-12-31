@@ -24,8 +24,8 @@ export default function Navigation() {
       }`}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between h-20">
-          <Link href="/" className="text-2xl font-bold text-white">
+        <div className="flex items-center justify-between h-16 sm:h-20">
+          <Link href="/" className="text-lg sm:text-xl md:text-2xl font-bold text-white">
             StepDream Academy
           </Link>
 
