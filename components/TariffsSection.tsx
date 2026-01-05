@@ -81,7 +81,7 @@ export default function TariffsSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-purple-950/40 via-purple-900/20 to-black pointer-events-none"></div>
       <div className="container-custom relative z-10">
         <div className="text-center mb-8">
-          <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-white mb-4 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-white mb-4 tracking-tight uppercase">
             Выберите свой тариф
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -148,7 +148,7 @@ export default function TariffsSection() {
                 onClick={() => {
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
                 }}
-                className="mt-4 sm:mt-6 w-full py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-bold text-base sm:text-lg md:text-xl hover:from-purple-700 hover:to-pink-700 transition-colors shadow-lg hover:shadow-xl"
+                className="mt-4 sm:mt-6 w-full py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-bold text-base sm:text-lg md:text-xl hover:from-purple-700 hover:to-pink-700 transition-colors shadow-lg hover:shadow-xl uppercase"
               >
                 Записаться на программу
               </button>

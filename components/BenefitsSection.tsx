@@ -66,7 +66,7 @@ export default function BenefitsSection() {
         </div>
 
         <div className="mt-6 sm:mt-8 text-center px-4">
-          <div className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-4 sm:p-5 md:p-8 text-white max-w-4xl w-full">
+          <div className="inline-block bg-gradient-to-r from-purple-900/90 via-purple-800/90 to-purple-900/90 rounded-2xl p-4 sm:p-5 md:p-8 text-white max-w-4xl w-full border border-purple-700/30">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold mb-3 sm:mb-4 tracking-tight">
               Начните зарабатывать уже с первого дня
             </h3>
@@ -77,7 +77,7 @@ export default function BenefitsSection() {
               onClick={() => {
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
               }}
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white text-purple-600 rounded-lg font-bold text-base sm:text-lg hover:bg-gray-100 transition-colors shadow-lg"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white text-purple-600 rounded-lg font-bold text-base sm:text-lg hover:bg-gray-100 transition-colors shadow-lg uppercase"
             >
               Записаться на программу
             </button>

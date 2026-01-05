@@ -48,7 +48,7 @@ export default function Hero() {
           </h1>
           
           {/* Sub-headline with gradient */}
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold gradient-text-purple-pink animate-slide-up uppercase px-2 tracking-tight">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold gradient-text-purple-pink animate-slide-up uppercase px-2 tracking-tight -mt-2 sm:-mt-3 md:-mt-4">
             СТАНЬ УСПЕШНЫМ БРОКЕРОМ!
           </h2>
 
