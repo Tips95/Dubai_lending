@@ -41,14 +41,14 @@ export default function Hero() {
       </div>
 
       <div className="container-custom relative z-10 pt-20 pb-8">
-        <div className="max-w-4xl mx-auto text-center space-y-5">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white leading-tight animate-fade-in uppercase px-2 tracking-tight">
             БРОКЕР-ТУР В ДУБАЙ
           </h1>
           
           {/* Sub-headline with gradient */}
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold gradient-text-purple-pink animate-slide-up uppercase px-2 tracking-tight -mt-2 sm:-mt-3 md:-mt-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold gradient-text-purple-pink animate-slide-up uppercase px-2 tracking-tight mt-1 sm:mt-2">
             СТАНЬ УСПЕШНЫМ БРОКЕРОМ!
           </h2>
 

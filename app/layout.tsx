@@ -9,6 +9,8 @@ const montserrat = Montserrat({
   display: 'swap',
   weight: ['400', '500', '600', '700', '800', '900'],
   fallback: ['system-ui', 'sans-serif'],
+  preload: true,
+  adjustFontFallback: true,
 })
 
 const raleway = Raleway({
@@ -17,6 +19,8 @@ const raleway = Raleway({
   display: 'swap',
   weight: ['400', '500', '600', '700', '800', '900'],
   fallback: ['system-ui', 'sans-serif'],
+  preload: true,
+  adjustFontFallback: true,
 })
 
 export const metadata: Metadata = {
