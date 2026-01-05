@@ -95,9 +95,9 @@ export default function Hero() {
             onClick={() => {
               document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
             }}
-            className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white text-base sm:text-lg font-semibold hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white text-base sm:text-lg font-semibold hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl uppercase"
           >
-            Получите бесплатную консультацию
+            Получи бесплатную консультацию
           </button>
         </div>
       </div>
