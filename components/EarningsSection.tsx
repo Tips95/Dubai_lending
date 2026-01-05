@@ -70,7 +70,7 @@ export default function EarningsSection() {
 
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6">
-              <h4 className="text-xl sm:text-2xl font-heading font-bold mb-3 sm:mb-4 tracking-tight">Мы работаем вместе:</h4>
+              <h4 className="text-xl sm:text-2xl font-heading font-extrabold mb-3 sm:mb-4 tracking-tight uppercase gradient-text-purple-pink">Мы работаем вместе:</h4>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="font-bold uppercase">Даём сделки</span>
@@ -88,7 +88,7 @@ export default function EarningsSection() {
             </div>
 
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 sm:p-6">
-              <h4 className="text-xl sm:text-2xl font-heading font-bold mb-3 sm:mb-4 tracking-tight">Итог для каждого студента:</h4>
+              <h4 className="text-xl sm:text-2xl font-heading font-extrabold mb-3 sm:mb-4 tracking-tight uppercase gradient-text-purple-pink">Итог для каждого студента:</h4>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="font-bold uppercase">Учитесь профессии</span>
