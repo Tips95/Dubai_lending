@@ -4,9 +4,9 @@ const nextConfig = {
     domains: ['images.unsplash.com'],
     unoptimized: true, // Для статического экспорта
   },
-  // Статический экспорт отключен для dev режима
-  // Включите его только для production build: output: 'export'
-  // output: 'export', // Раскомментируйте для статического экспорта
+  // Статический экспорт для Timeweb Cloud (они ожидают index.html)
+  // В dev режиме Next.js игнорирует это, так что безопасно
+  output: 'export',
   // Отключаем trailing slash для совместимости
   trailingSlash: false,
 }
