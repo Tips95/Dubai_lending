@@ -9,6 +9,21 @@
   
   body {
     @apply bg-black text-white antialiased;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+  }
+  
+  h1 {
+    @apply font-display;
+    letter-spacing: -0.02em;
   }
 }
 
@@ -26,7 +41,7 @@
   }
   
   .section-padding {
-    @apply py-8 md:py-10 lg:py-12;
+    @apply py-3 md:py-4 lg:py-5;
   }
   
   .container-custom {

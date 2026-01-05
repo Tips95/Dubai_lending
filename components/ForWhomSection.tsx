@@ -25,10 +25,11 @@ export default function ForWhomSection() {
   ]
 
   return (
-    <section id="for-whom" className="section-padding bg-black text-white">
-      <div className="container-custom">
+    <section id="for-whom" className="section-padding bg-black text-white relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-950/40 via-purple-900/20 to-black pointer-events-none"></div>
+      <div className="container-custom relative z-10">
         <div className="text-center mb-6 sm:mb-8 px-4">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-3 sm:mb-4 tracking-tight">
             Для кого этот брокер-тур?
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
@@ -44,7 +45,7 @@ export default function ForWhomSection() {
             >
               <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors" />
               <div className="relative z-10">
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 uppercase">{item.title}</h3>
+                <h3 className="text-xl sm:text-2xl font-heading font-extrabold mb-3 sm:mb-4 uppercase tracking-tight">{item.title}</h3>
                 <p className="text-sm sm:text-base md:text-lg opacity-90 leading-relaxed">{item.description}</p>
               </div>
             </div>

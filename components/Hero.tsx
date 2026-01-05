@@ -17,12 +17,15 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-dark">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      {/* Purple gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-950/50 via-purple-900/30 to-black"></div>
+      
       {/* Wave Background Shapes */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute top-40 right-20 w-80 h-80 bg-pink-500/20 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-purple-400/15 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-20 left-10 w-96 h-96 bg-purple-600/30 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute top-40 right-20 w-80 h-80 bg-purple-500/25 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-purple-700/20 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
         
         {/* Wave shapes */}
         <svg className="absolute bottom-0 left-0 w-full h-64 opacity-20" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -40,17 +43,17 @@ export default function Hero() {
       <div className="container-custom relative z-10 pt-20 pb-8">
         <div className="max-w-4xl mx-auto text-center space-y-5">
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight animate-fade-in uppercase px-2">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white leading-tight animate-fade-in uppercase px-2 tracking-tight">
             БРОКЕР-ТУР В ДУБАЙ
           </h1>
           
           {/* Sub-headline with gradient */}
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold gradient-text-purple-pink animate-slide-up uppercase px-2">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold gradient-text-purple-pink animate-slide-up uppercase px-2 tracking-tight">
             СТАНЬ УСПЕШНЫМ БРОКЕРОМ!
           </h2>
 
           {/* Description */}
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed animate-slide-up px-4" style={{ animationDelay: '0.2s' }}>
+          <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-3xl mx-auto leading-snug animate-slide-up px-4" style={{ animationDelay: '0.2s' }}>
             Выездной тур в Дубай на неделю или месяц. Личное наставничество от{' '}
             <a 
               href="https://www.instagram.com/terekbaev?igsh=MXIwcG5mbjF6b240dg==" 
@@ -64,24 +67,24 @@ export default function Hero() {
           </p>
 
           {/* Features */}
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 mt-6 animate-slide-up px-4" style={{ animationDelay: '0.4s' }}>
-            <div className="flex items-center gap-2 sm:gap-3 text-white">
-              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <div className="flex flex-row flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mt-6 animate-slide-up px-4" style={{ animationDelay: '0.4s' }}>
+            <div className="flex items-center gap-1.5 sm:gap-2 text-white">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-sm sm:text-base md:text-lg">Наставничество 6 месяцев</span>
+              <span className="text-xs sm:text-sm md:text-base whitespace-nowrap">Наставничество 6 месяцев</span>
             </div>
-            <div className="flex items-center gap-2 sm:gap-3 text-white">
-              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <div className="flex items-center gap-1.5 sm:gap-2 text-white">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-sm sm:text-base md:text-lg">Реальные сделки</span>
+              <span className="text-xs sm:text-sm md:text-base whitespace-nowrap">Реальные сделки</span>
             </div>
-            <div className="flex items-center gap-2 sm:gap-3 text-white">
-              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <div className="flex items-center gap-1.5 sm:gap-2 text-white">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-sm sm:text-base md:text-lg">10 лидов от агентства</span>
+              <span className="text-xs sm:text-sm md:text-base whitespace-nowrap">10 лидов от агентства</span>
             </div>
           </div>
         </div>

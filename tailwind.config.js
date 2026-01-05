@@ -103,9 +103,10 @@ module.exports = {
         }
       },
       fontFamily: {
-        'display': ['Playfair Display', 'serif'],
-        'body': ['Inter', 'sans-serif'],
-        'elegant': ['Cormorant Garamond', 'serif'],
+        'sans': ['var(--font-montserrat)', 'Montserrat', 'system-ui', 'sans-serif'],
+        'display': ['var(--font-raleway)', 'Raleway', 'sans-serif'],
+        'heading': ['var(--font-raleway)', 'Raleway', 'sans-serif'],
+        'body': ['var(--font-montserrat)', 'Montserrat', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-out',
@@ -145,7 +146,7 @@ module.exports = {
         'gradient-ocean': 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
         'gradient-sunset': 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
         'gradient-purple-pink': 'linear-gradient(135deg, #a855f7 0%, #ec4899 100%)',
-        'gradient-dark': 'linear-gradient(180deg, #1e1b4b 0%, #0f172a 50%, #000000 100%)',
+        'gradient-dark': 'linear-gradient(180deg, #000000 0%, #1a0a2e 30%, #000000 70%, #1a0a2e 100%)',
       },
       boxShadow: {
         'premium': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',

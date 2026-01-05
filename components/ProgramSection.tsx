@@ -77,10 +77,11 @@ export default function ProgramSection() {
   ]
 
   return (
-    <section id="program" className="section-padding bg-black text-white">
-      <div className="container-custom">
+    <section id="program" className="section-padding bg-black text-white relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-950/40 via-purple-900/20 to-black pointer-events-none"></div>
+      <div className="container-custom relative z-10">
         <div className="text-center mb-6 sm:mb-8 px-4">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-3 sm:mb-4 tracking-tight">
             Что вы получаете за эти деньги
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
@@ -94,7 +95,7 @@ export default function ProgramSection() {
               key={index}
               className="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:bg-white/10"
             >
-              <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 uppercase">
+              <h3 className="text-base sm:text-lg md:text-xl font-heading font-bold text-white mb-2 uppercase tracking-tight">
                 {benefit.title}
               </h3>
               <p className="text-sm sm:text-base text-gray-300">{benefit.description}</p>
@@ -103,7 +104,7 @@ export default function ProgramSection() {
         </div>
 
         <div className="mt-6 sm:mt-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-4 sm:p-5 md:p-8 text-white text-center px-4">
-          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
+          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold mb-3 sm:mb-4 tracking-tight">
             Введение в профессию «Брокер по зарубежной недвижимости»
           </h3>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90">

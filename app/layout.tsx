@@ -1,9 +1,23 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
+import { Montserrat, Raleway } from 'next/font/google'
 import React from 'react'
 import './globals.css'
 
-const inter = Inter({ subsets: ['cyrillic', 'latin'] })
+const montserrat = Montserrat({ 
+  subsets: ['cyrillic', 'latin'],
+  variable: '--font-montserrat',
+  display: 'swap',
+  weight: ['400', '500', '600', '700', '800', '900'],
+  fallback: ['system-ui', 'sans-serif'],
+})
+
+const raleway = Raleway({
+  subsets: ['cyrillic', 'latin'],
+  variable: '--font-raleway',
+  display: 'swap',
+  weight: ['400', '500', '600', '700', '800', '900'],
+  fallback: ['system-ui', 'sans-serif'],
+})
 
 export const metadata: Metadata = {
   title: 'Брокер-Тур в Дубай | Академия StepDream',
@@ -24,7 +38,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body className={inter.className}>{children}</body>
+      <body className={`${montserrat.variable} ${raleway.variable} ${montserrat.className}`}>{children}</body>
     </html>
   )
 }

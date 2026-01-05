@@ -24,12 +24,13 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="section-padding bg-black text-white">
-      <div className="container-custom">
+    <section id="contact" className="section-padding bg-black text-white relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-950/40 via-purple-900/20 to-black pointer-events-none"></div>
+      <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-start">
           {/* Left Side - Contact Info */}
           <div className="text-white px-4 sm:px-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold mb-4 sm:mb-6 tracking-tight">
               Свяжитесь с нами
             </h2>
             <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-90">

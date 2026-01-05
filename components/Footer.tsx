@@ -2,11 +2,12 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-8 sm:py-12 border-t border-white/10">
-      <div className="container-custom">
+    <footer className="bg-black text-white py-4 sm:py-6 border-t border-white/10 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-950/30 via-transparent to-black pointer-events-none"></div>
+      <div className="container-custom relative z-10">
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
           <div>
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">StepDream Academy</h3>
+            <h3 className="text-xl sm:text-2xl font-heading font-bold text-white mb-3 sm:mb-4 tracking-tight">StepDream Academy</h3>
             <p className="text-sm sm:text-base text-gray-400">
               Академия брокеров по зарубежной недвижимости. Станьте успешным брокером в Дубае.
             </p>

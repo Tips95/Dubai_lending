@@ -77,10 +77,11 @@ export default function TariffsSection() {
   const currentTariff = tariffs[selectedTariff] as typeof tariffs.week
 
   return (
-    <section id="tariffs" className="section-padding bg-black text-white">
-      <div className="container-custom">
+    <section id="tariffs" className="section-padding bg-black text-white relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-950/40 via-purple-900/20 to-black pointer-events-none"></div>
+      <div className="container-custom relative z-10">
         <div className="text-center mb-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-white mb-4 tracking-tight">
             Выберите свой тариф
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -126,7 +127,7 @@ export default function TariffsSection() {
         <div className="max-w-4xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden">
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 sm:p-5 md:p-7 text-white">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">{currentTariff.title}</h3>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold mb-2 tracking-tight">{currentTariff.title}</h3>
               <div className="flex items-baseline gap-2">
                 <span className="text-4xl sm:text-5xl md:text-6xl font-bold">{currentTariff.price}</span>
                 <span className="text-xl sm:text-2xl">₽</span>
@@ -134,7 +135,7 @@ export default function TariffsSection() {
             </div>
 
             <div className="p-4 sm:p-5 md:p-8">
-              <h4 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Что входит в тариф:</h4>
+              <h4 className="text-xl sm:text-2xl font-heading font-bold text-white mb-4 sm:mb-6 tracking-tight">Что входит в тариф:</h4>
               <ul className="space-y-3 sm:space-y-4">
                 {currentTariff.features.map((feature: string, index: number) => (
                   <li key={index} className="flex items-start">
