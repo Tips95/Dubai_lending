@@ -53,7 +53,7 @@ export default function Hero() {
           </h2>
 
           {/* Description */}
-          <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-3xl mx-auto leading-snug animate-slide-up px-4" style={{ animationDelay: '0.2s' }}>
+          <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-3xl mx-auto leading-snug animate-slide-up px-4 mt-4 sm:mt-5" style={{ animationDelay: '0.2s' }}>
             Выездной тур в Дубай на неделю или месяц. Личное наставничество от{' '}
             <a 
               href="https://www.instagram.com/terekbaev?igsh=MXIwcG5mbjF6b240dg==" 

@@ -41,7 +41,7 @@ export default function BenefitsSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-purple-950/40 via-purple-900/20 to-black pointer-events-none"></div>
       <div className="container-custom relative z-10">
         <div className="text-center mb-6 sm:mb-8 px-4">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-3 sm:mb-4 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-3 sm:mb-4 tracking-tight uppercase">
             Ключевые преимущества программы
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
@@ -68,7 +68,7 @@ export default function BenefitsSection() {
         <div className="mt-6 sm:mt-8 text-center px-4">
           <div className="inline-block bg-gradient-to-r from-purple-900/90 via-purple-800/90 to-purple-900/90 rounded-2xl p-4 sm:p-5 md:p-8 text-white max-w-4xl w-full border border-purple-700/30">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold mb-3 sm:mb-4 tracking-tight">
-              Начните зарабатывать уже с первого дня
+              Начни зарабатывать уже с первого дня
             </h3>
             <p className="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 opacity-90">
               Получите реальные комиссии в долларах от совместных сделок с агентством StepDream

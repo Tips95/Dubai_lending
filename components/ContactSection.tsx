@@ -1,40 +1,18 @@
 'use client'
 
-import { useState, FormEvent } from 'react'
-
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    message: '',
-  })
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    // Здесь будет логика отправки формы
-    // В production здесь будет отправка на API
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Form submitted:', formData)
-    }
-    setIsSubmitted(true)
-    setFormData({ name: '', phone: '', email: '', message: '' })
-    setTimeout(() => setIsSubmitted(false), 5000)
-  }
-
   return (
     <section id="contact" className="section-padding bg-black text-white relative">
       <div className="absolute inset-0 bg-gradient-to-b from-purple-950/40 via-purple-900/20 to-black pointer-events-none"></div>
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-start">
-          {/* Left Side - Contact Info */}
+        <div className="max-w-4xl mx-auto">
+          {/* Contact Info */}
           <div className="text-white px-4 sm:px-0">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold mb-4 sm:mb-6 tracking-tight">
               Свяжитесь с нами
             </h2>
             <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-90">
-              Оставьте заявку, и мы свяжемся с вами в ближайшее время для консультации
+              Свяжитесь с нами любым удобным способом для консультации
             </p>
 
             <div className="space-y-4 sm:space-y-6">
@@ -134,74 +112,6 @@ export default function ContactSection() {
                 </a>
               </div>
             </div>
-          </div>
-
-          {/* Right Side - Form */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-6 md:p-8">
-            {isSubmitted ? (
-              <div className="text-center py-8 sm:py-12">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <svg className="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Заявка отправлена!</h3>
-                <p className="text-sm sm:text-base text-white/80">Мы свяжемся с вами в ближайшее время</p>
-              </div>
-            ) : (
-              <>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Оставить заявку</h3>
-                <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Ваше имя"
-                      required
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white/20 border border-white/30 rounded-lg text-sm sm:text-base text-white placeholder-white/60 focus:ring-2 focus:ring-gold-500 focus:border-transparent outline-none transition-all"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="tel"
-                      placeholder="Телефон"
-                      required
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white/20 border border-white/30 rounded-lg text-sm sm:text-base text-white placeholder-white/60 focus:ring-2 focus:ring-gold-500 focus:border-transparent outline-none transition-all"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="email"
-                      placeholder="Email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white/20 border border-white/30 rounded-lg text-sm sm:text-base text-white placeholder-white/60 focus:ring-2 focus:ring-gold-500 focus:border-transparent outline-none transition-all"
-                    />
-                  </div>
-                  <div>
-                    <textarea
-                      placeholder="Сообщение (необязательно)"
-                      rows={4}
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white/20 border border-white/30 rounded-lg text-sm sm:text-base text-white placeholder-white/60 focus:ring-2 focus:ring-gold-500 focus:border-transparent outline-none transition-all resize-none"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-bold text-base sm:text-lg hover:from-purple-700 hover:to-pink-700 transition-colors shadow-lg hover:shadow-xl"
-                  >
-                    Отправить заявку
-                  </button>
-                  <p className="text-xs text-white/60 text-center">
-                    Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
-                  </p>
-                </form>
-              </>
-            )}
           </div>
         </div>
       </div>

@@ -108,7 +108,7 @@ export default function ProgramSection() {
             Введение в профессию «Брокер по зарубежной недвижимости»
           </h3>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90">
-            Начните зарабатывать уже с первого дня обучения
+            Начни зарабатывать уже с первого дня обучения
           </p>
         </div>
       </div>
