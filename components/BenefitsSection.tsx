@@ -53,7 +53,7 @@ export default function BenefitsSection() {
           {keyBenefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10 hover:border-purple-500/50 transition-all hover:bg-white/10 group"
+              className="gradient-border bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10 transition-all hover:bg-white/10 group"
             >
               <h3 className="text-base sm:text-lg md:text-xl font-heading font-bold text-white mb-2 uppercase tracking-tight">
                 {benefit.title}
@@ -66,7 +66,7 @@ export default function BenefitsSection() {
         </div>
 
         <div className="mt-6 sm:mt-8 text-center px-4">
-          <div className="inline-block bg-gradient-to-r from-purple-900/90 via-purple-800/90 to-purple-900/90 rounded-2xl p-4 sm:p-5 md:p-8 text-white max-w-4xl w-full border border-purple-700/30">
+          <div className="gradient-border-always inline-block bg-gradient-to-r from-purple-900/90 via-purple-800/90 to-purple-900/90 rounded-2xl p-4 sm:p-5 md:p-8 text-white max-w-4xl w-full">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold mb-3 sm:mb-4 tracking-tight">
               Начни зарабатывать уже с первого дня
             </h3>

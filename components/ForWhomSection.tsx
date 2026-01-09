@@ -41,9 +41,9 @@ export default function ForWhomSection() {
           {targetAudience.map((item, index) => (
             <div
               key={index}
-              className={`relative group overflow-hidden rounded-2xl bg-gradient-to-br ${item.gradient} p-5 sm:p-6 md:p-8 text-white transform hover:scale-105 transition-all duration-300 shadow-xl border border-purple-600/30`}
+              className={`gradient-border-always relative group overflow-hidden rounded-2xl bg-gradient-to-br ${item.gradient} p-5 sm:p-6 md:p-8 text-white transform hover:scale-105 transition-all duration-300 shadow-xl`}
             >
-              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors" />
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors z-0" />
               <div className="relative z-10">
                 <h3 className="text-xl sm:text-2xl font-heading font-extrabold mb-3 sm:mb-4 uppercase tracking-tight">{item.title}</h3>
                 <p className="text-sm sm:text-base md:text-lg opacity-90 leading-relaxed">{item.description}</p>

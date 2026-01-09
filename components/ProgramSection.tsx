@@ -93,7 +93,7 @@ export default function ProgramSection() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:bg-white/10"
+              className="gradient-border bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10 transition-all duration-300 hover:bg-white/10"
             >
               <h3 className="text-base sm:text-lg md:text-xl font-heading font-bold text-white mb-2 uppercase tracking-tight">
                 {benefit.title}
