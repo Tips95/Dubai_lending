@@ -32,23 +32,6 @@ export default function FloatingParticles() {
         <div className="orb orb-5" />
       </div>
 
-      {/* Плавающие светящиеся линии */}
-      <div className="glow-lines-layer">
-        {Array.from({ length: 8 }).map((_, i) => (
-          <div
-            key={`line-${i}`}
-            className="glow-line"
-            style={{
-              left: `${10 + i * 12}%`,
-              top: `${20 + (i % 3) * 25}%`,
-              animationDelay: `${i * 0.5}s`,
-              animationDuration: `${15 + i * 2}s`,
-              transform: `rotate(${-45 + i * 15}deg)`,
-            }}
-          />
-        ))}
-      </div>
-
       {/* Волны/рябь */}
       <div className="waves-layer">
         <div className="wave wave-1" />
