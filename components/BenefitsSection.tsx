@@ -85,7 +85,7 @@ export default function BenefitsSection() {
           ref={ctaAnimation.ref as React.RefObject<HTMLDivElement>}
           className={`mt-10 sm:mt-14 text-center px-4 section-transition ${ctaAnimation.isVisible ? 'is-visible' : ''}`}
         >
-          <div className="gradient-border-always inline-block bg-gradient-to-r from-purple-900/90 via-purple-800/90 to-purple-900/90 rounded-3xl p-8 sm:p-10 md:p-12 text-white max-w-4xl w-full shadow-2xl">
+          <div className="gradient-border-always inline-block bg-gradient-to-r from-gray-950 via-purple-950/80 to-gray-950 rounded-3xl p-8 sm:p-10 md:p-12 text-white max-w-4xl w-full shadow-2xl">
             <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold mb-5 sm:mb-6 tracking-tight uppercase leading-tight">
               Начни зарабатывать уже с первого дня
             </h3>

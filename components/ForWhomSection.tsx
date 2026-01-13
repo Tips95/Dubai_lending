@@ -5,22 +5,22 @@ export default function ForWhomSection() {
     {
       title: 'Амбициозные люди',
       description: 'Которые хотят постоянно развиваться в этой денежной нише и готовых зарабатывать более 10 000$ в месяц в Дубае',
-      gradient: 'from-purple-800/90 to-purple-700/90',
+      gradient: 'from-gray-950 via-purple-950/80 to-gray-950',
     },
     {
       title: 'Брокеры по недвижимости',
       description: 'Ищущие партнера в Дубае и готовых передавать клиентов удаленно',
-      gradient: 'from-purple-800/90 to-purple-700/90',
+      gradient: 'from-gray-950 via-purple-950/80 to-gray-950',
     },
     {
       title: 'Инвесторы',
       description: 'Для тех, кто задумывается о покупке квартиры в Дубае для жизни или инвестиций',
-      gradient: 'from-purple-800/90 to-purple-700/90',
+      gradient: 'from-gray-950 via-purple-950/80 to-gray-950',
     },
     {
       title: 'Предприниматели',
       description: 'Мечтающие войти в деловое сообщество Дубая и создать свой бизнес в ОАЭ',
-      gradient: 'from-purple-800/90 to-purple-700/90',
+      gradient: 'from-gray-950 via-purple-950/80 to-gray-950',
     },
   ]
 

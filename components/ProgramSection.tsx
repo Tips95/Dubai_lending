@@ -103,7 +103,7 @@ export default function ProgramSection() {
           ))}
         </div>
 
-        <div className="mt-6 sm:mt-8 bg-gradient-to-r from-purple-900/90 via-purple-800/90 to-purple-900/90 rounded-2xl p-4 sm:p-5 md:p-8 text-white text-center px-4 border border-purple-700/30">
+        <div className="mt-6 sm:mt-8 bg-gradient-to-r from-gray-950 via-purple-950/80 to-gray-950 rounded-2xl p-4 sm:p-5 md:p-8 text-white text-center px-4 border border-purple-700/30">
           <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold mb-3 sm:mb-4 tracking-tight">
             Введение в профессию «Брокер по зарубежной недвижимости»
           </h3>

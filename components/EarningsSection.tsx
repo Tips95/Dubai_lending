@@ -74,7 +74,7 @@ export default function EarningsSection() {
 
         <div 
           ref={prefAnimation.ref as React.RefObject<HTMLDivElement>}
-          className={`bg-gradient-to-r from-purple-900/90 via-purple-800/90 to-purple-900/90 rounded-3xl p-6 sm:p-8 md:p-12 text-white border border-purple-700/30 shadow-2xl section-transition ${prefAnimation.isVisible ? 'is-visible' : ''}`}
+          className={`bg-gradient-to-r from-gray-950 via-purple-950/80 to-gray-950 rounded-3xl p-6 sm:p-8 md:p-12 text-white border border-purple-700/30 shadow-2xl section-transition ${prefAnimation.isVisible ? 'is-visible' : ''}`}
         >
           <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold mb-5 sm:mb-8 text-center px-2 tracking-tight uppercase leading-tight">
             Преференции для студентов Академии Брокеров StepDream
