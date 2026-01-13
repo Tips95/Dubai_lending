@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Montserrat, Raleway } from 'next/font/google'
 import React from 'react'
 import './globals.css'
+import Providers from '@/components/Providers'
 
 const montserrat = Montserrat({ 
   subsets: ['cyrillic', 'latin'],
@@ -41,8 +42,24 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ru">
-      <body className={`${montserrat.variable} ${raleway.variable} ${montserrat.className}`}>{children}</body>
+    <html lang="ru" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const theme = localStorage.getItem('theme') || 'dark';
+                document.documentElement.setAttribute('data-theme', theme);
+              } catch (e) {}
+            `,
+          }}
+        />
+      </head>
+      <body className={`${montserrat.variable} ${raleway.variable} ${montserrat.className}`}>
+        <Providers>
+          {children}
+        </Providers>
+      </body>
     </html>
   )
 }

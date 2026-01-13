@@ -1,6 +1,14 @@
 'use client'
 
+import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { FormSkeleton } from '@/components/SkeletonLoader'
+import { useState } from 'react'
+
 export default function ContactSection() {
+  const [isLoading] = useState(false)
+  const titleAnimation = useScrollAnimation({ threshold: 0.2 })
+  const contactAnimation = useScrollAnimation({ threshold: 0.1, delay: 200 })
+
   return (
     <section id="contact" className="section-padding bg-black text-white relative">
       <div className="absolute inset-0 bg-gradient-to-b from-purple-950/40 via-purple-900/20 to-black pointer-events-none"></div>
@@ -8,68 +16,80 @@ export default function ContactSection() {
         <div className="max-w-4xl mx-auto">
           {/* Contact Info */}
           <div className="text-white px-4 sm:px-0">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold mb-4 sm:mb-6 tracking-tight">
-              Свяжитесь с нами
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-90">
-              Свяжитесь с нами любым удобным способом для консультации
-            </p>
+            <div 
+              ref={titleAnimation.ref as React.RefObject<HTMLDivElement>}
+              className={`section-transition ${titleAnimation.isVisible ? 'is-visible' : ''}`}
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold mb-5 sm:mb-8 tracking-tight uppercase">
+                Свяжитесь с нами
+              </h2>
+              <p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 text-gray-200 leading-relaxed">
+                Свяжитесь с нами любым удобным способом для консультации
+              </p>
+            </div>
 
-            <div className="space-y-4 sm:space-y-6">
-              <div className="flex items-start gap-3 sm:gap-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gold-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {isLoading ? (
+              <FormSkeleton />
+            ) : (
+            <div 
+              ref={contactAnimation.ref as React.RefObject<HTMLDivElement>}
+              className={`space-y-6 sm:space-y-8 stagger-animation ${contactAnimation.isVisible ? 'is-visible' : ''}`}
+            >
+              <div className="flex items-start gap-4 sm:gap-5 p-5 sm:p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-base sm:text-lg mb-1">Телефон</h3>
-                  <a href="tel:+971503506009" className="text-sm sm:text-base text-purple-400 hover:text-pink-400 break-all">
+                  <h3 className="font-bold text-lg sm:text-xl mb-2">Телефон</h3>
+                  <a href="tel:+971503506009" className="text-base sm:text-lg text-purple-400 hover:text-pink-400 transition-colors font-semibold">
                     +971 50 350 60 09
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 sm:gap-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-start gap-4 sm:gap-5 p-5 sm:p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-base sm:text-lg mb-1">Email</h3>
-                  <a href="mailto:info@stepdream.ae" className="text-sm sm:text-base text-purple-400 hover:text-pink-400 break-all">
+                  <h3 className="font-bold text-lg sm:text-xl mb-2">Email</h3>
+                  <a href="mailto:info@stepdream.ae" className="text-base sm:text-lg text-purple-400 hover:text-pink-400 transition-colors font-semibold break-all">
                     info@stepdream.ae
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 sm:gap-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-start gap-4 sm:gap-5 p-5 sm:p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-base sm:text-lg mb-1">Адрес</h3>
-                  <p className="text-sm sm:text-base opacity-90">
+                  <h3 className="font-bold text-lg sm:text-xl mb-2">Адрес</h3>
+                  <p className="text-base sm:text-lg text-gray-200 leading-relaxed">
                     Dubai Hills Estate, Park Heights Square 1, 6th Floor<br />
                     Dubai, UAE
                   </p>
                 </div>
               </div>
             </div>
+            )}
 
             {/* Social Links */}
-            <div className="mt-6 sm:mt-8">
-              <p className="text-xs sm:text-sm text-gray-400 mb-3 sm:mb-4">Мы в социальных сетях:</p>
-              <div className="flex gap-3 sm:gap-4">
+            <div className="mt-8 sm:mt-12">
+              <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-5 font-semibold">Мы в социальных сетях:</p>
+              <div className="flex gap-4 sm:gap-5">
                 <a
                   href="https://wa.me/971503506009"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 rounded-lg flex items-center justify-center transition-colors"
+                  className="w-12 h-12 sm:w-14 sm:h-14 bg-white/10 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 rounded-xl flex items-center justify-center transition-all hover:scale-110 shadow-lg"
                   aria-label="WhatsApp"
                 >
                 <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -80,7 +100,7 @@ export default function ContactSection() {
                   href="https://t.me/stepdream"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 rounded-lg flex items-center justify-center transition-colors"
+                  className="w-12 h-12 sm:w-14 sm:h-14 bg-white/10 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 rounded-xl flex items-center justify-center transition-all hover:scale-110 shadow-lg"
                   aria-label="Telegram"
                 >
                 <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -91,7 +111,7 @@ export default function ContactSection() {
                   href="https://www.instagram.com/stepdreambrokers?igsh=MXYyOTdyMTIxd2JpYQ=="
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 rounded-lg flex items-center justify-center transition-colors"
+                  className="w-12 h-12 sm:w-14 sm:h-14 bg-white/10 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 rounded-xl flex items-center justify-center transition-all hover:scale-110 shadow-lg"
                   aria-label="Instagram Академии"
                   title="Instagram Академии StepDream"
                 >
@@ -100,13 +120,13 @@ export default function ContactSection() {
                   </svg>
                 </a>
               </div>
-              <div className="mt-4 text-sm text-gray-400">
-                <p>Также подписывайтесь на основателя:</p>
+              <div className="mt-5 text-base text-gray-300">
+                <p className="mb-2">Также подписывайтесь на основателя:</p>
                 <a 
                   href="https://www.instagram.com/terekbaev?igsh=MXIwcG5mbjF6b240dg==" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-purple-400 hover:text-pink-400 transition-colors underline"
+                  className="text-purple-400 hover:text-pink-400 transition-colors underline text-lg font-semibold"
                 >
                   @terekbaev
                 </a>

@@ -1,6 +1,11 @@
 'use client'
 
+import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+
 export default function BenefitsSection() {
+  const titleAnimation = useScrollAnimation({ threshold: 0.2 })
+  const cardsAnimation = useScrollAnimation({ threshold: 0.1, delay: 200 })
+  const ctaAnimation = useScrollAnimation({ threshold: 0.1, delay: 400 })
   const keyBenefits = [
     {
       title: 'Наставничество от профессионала',
@@ -40,44 +45,58 @@ export default function BenefitsSection() {
     <section id="benefits" className="section-padding bg-black text-white relative">
       <div className="absolute inset-0 bg-gradient-to-b from-purple-950/40 via-purple-900/20 to-black pointer-events-none"></div>
       <div className="container-custom relative z-10">
-        <div className="text-center mb-6 sm:mb-8 px-4">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-3 sm:mb-4 tracking-tight uppercase">
+        <div 
+          ref={titleAnimation.ref as React.RefObject<HTMLDivElement>}
+          className={`text-center mb-10 sm:mb-14 px-4 section-transition ${titleAnimation.isVisible ? 'is-visible' : ''}`}
+        >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-white mb-5 sm:mb-7 tracking-tight uppercase leading-tight">
             Ключевые преимущества программы
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
             Все необходимое для успешного старта карьеры брокера по зарубежной недвижимости
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div 
+          ref={cardsAnimation.ref as React.RefObject<HTMLDivElement>}
+          className={`grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-7 stagger-animation ${cardsAnimation.isVisible ? 'is-visible' : ''}`}
+        >
           {keyBenefits.map((benefit, index) => (
             <div
               key={index}
-              className="gradient-border bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/10 transition-all hover:bg-white/10 group"
+              className="gradient-border bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-7 border border-white/10 transition-all hover:bg-white/10 group"
             >
-              <h3 className="text-base sm:text-lg md:text-xl font-heading font-bold text-white mb-2 uppercase tracking-tight">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-heading font-bold text-white mb-3 uppercase tracking-tight leading-tight">
                 {benefit.title}
               </h3>
-              <p className="text-sm sm:text-base text-gray-300">
+              <p className="text-sm sm:text-base md:text-lg text-gray-200 leading-relaxed">
                 {benefit.description}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-6 sm:mt-8 text-center px-4">
-          <div className="gradient-border-always inline-block bg-gradient-to-r from-purple-900/90 via-purple-800/90 to-purple-900/90 rounded-2xl p-4 sm:p-5 md:p-8 text-white max-w-4xl w-full">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-heading font-extrabold mb-3 sm:mb-4 tracking-tight">
+        <div 
+          ref={ctaAnimation.ref as React.RefObject<HTMLDivElement>}
+          className={`mt-10 sm:mt-14 text-center px-4 section-transition ${ctaAnimation.isVisible ? 'is-visible' : ''}`}
+        >
+          <div className="gradient-border-always inline-block bg-gradient-to-r from-purple-900/90 via-purple-800/90 to-purple-900/90 rounded-3xl p-8 sm:p-10 md:p-12 text-white max-w-4xl w-full shadow-2xl">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold mb-5 sm:mb-6 tracking-tight uppercase leading-tight">
               Начни зарабатывать уже с первого дня
             </h3>
-            <p className="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 opacity-90">
+            <p className="text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 text-gray-100 leading-relaxed max-w-2xl mx-auto">
               Получите реальные комиссии в долларах от совместных сделок с агентством StepDream
             </p>
             <button
               onClick={() => {
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
               }}
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white text-purple-600 rounded-lg font-bold text-base sm:text-lg hover:bg-gray-100 transition-colors shadow-lg uppercase"
+              className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-white text-purple-600 rounded-xl font-bold text-lg sm:text-xl hover:bg-gray-100 hover:scale-105 transition-all shadow-xl uppercase"
             >
               Записаться на программу
             </button>
