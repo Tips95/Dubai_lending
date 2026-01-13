@@ -17,85 +17,94 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-      {/* Purple gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-950/50 via-purple-900/30 to-black"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: '#000000' }}>
+      {/* Ultra dark background for maximum contrast */}
+      <div className="absolute inset-0 bg-black"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-950/30 to-black"></div>
       
-      {/* Wave Background Shapes */}
+      {/* Elegant animated background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-purple-600/30 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute top-40 right-20 w-80 h-80 bg-purple-500/25 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-purple-700/20 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
+        {/* Animated gradient waves */}
+        <div className="gradient-wave gradient-wave-1"></div>
+        <div className="gradient-wave gradient-wave-2"></div>
+        <div className="gradient-wave gradient-wave-3"></div>
         
-        {/* Wave shapes */}
-        <svg className="absolute bottom-0 left-0 w-full h-64 opacity-20" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,60 C300,100 600,20 900,60 C1050,80 1150,40 1200,60 L1200,120 L0,120 Z" fill="url(#waveGradient)" />
-          <defs>
-            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#a855f7" stopOpacity="0.3" />
-              <stop offset="50%" stopColor="#ec4899" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#a855f7" stopOpacity="0.3" />
-            </linearGradient>
-          </defs>
-        </svg>
+        {/* Minimal grid lines */}
+        <div className="grid-lines">
+          <div className="grid-line grid-line-h-1"></div>
+          <div className="grid-line grid-line-h-2"></div>
+          <div className="grid-line grid-line-v-1"></div>
+          <div className="grid-line grid-line-v-2"></div>
+        </div>
+        
+        {/* Elegant light sweep */}
+        <div className="light-sweep"></div>
+        
+        {/* Subtle floating dots for extra depth */}
+        <div className="floating-dots">
+          <div className="dot dot-1"></div>
+          <div className="dot dot-2"></div>
+          <div className="dot dot-3"></div>
+          <div className="dot dot-4"></div>
+        </div>
       </div>
 
       <div className="container-custom relative z-10 pt-20 pb-8">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white leading-tight animate-fade-in uppercase px-2 tracking-tight">
+          <h1 className="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white leading-tight uppercase px-2 tracking-tight">
             БРОКЕР-ТУР В ДУБАЙ
           </h1>
           
           {/* Sub-headline with animated gradient */}
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold gradient-text-animated animate-slide-up uppercase px-2 tracking-tight mt-1 sm:mt-2">
+          <h2 className="hero-subtitle text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold gradient-text-animated uppercase px-2 tracking-tight mt-1 sm:mt-2">
             СТАНЬ УСПЕШНЫМ БРОКЕРОМ!
           </h2>
 
           {/* Description */}
-          <p className="text-sm sm:text-base md:text-lg text-gray-300 max-w-3xl mx-auto leading-snug animate-slide-up px-4 mt-4 sm:mt-5" style={{ animationDelay: '0.2s' }}>
+          <p className="hero-subtitle text-sm sm:text-base md:text-lg text-gray-200 max-w-3xl mx-auto leading-relaxed px-4 mt-6 sm:mt-8" style={{ animationDelay: '0.3s' }}>
             Выездной тур в Дубай на неделю или месяц. Личное наставничество от{' '}
             <a 
               href="https://www.instagram.com/terekbaev?igsh=MXIwcG5mbjF6b240dg==" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-purple-400 hover:text-pink-400 transition-colors underline break-words"
+              className="text-purple-400 hover:text-pink-400 transition-colors underline break-words font-semibold"
             >
               Беслана Терекбаева
             </a>
             {' '}и реальные сделки с первого дня.
           </p>
 
-          {/* Features */}
-          <div className="flex flex-row flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mt-6 animate-slide-up px-4" style={{ animationDelay: '0.4s' }}>
-            <div className="flex items-center gap-1.5 sm:gap-2 text-white">
-              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          {/* Features with staggered animation */}
+          <div className="flex flex-row flex-wrap justify-center gap-3 sm:gap-4 md:gap-5 mt-8 sm:mt-10 px-4">
+            <div className="feature-item flex items-center gap-2 sm:gap-3 bg-white/5 backdrop-blur-sm px-4 sm:px-5 py-2 sm:py-3 rounded-full border border-purple-500/30">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-xs sm:text-sm md:text-base whitespace-nowrap">Наставничество 6 месяцев</span>
+              <span className="text-sm sm:text-base md:text-lg font-semibold text-white whitespace-nowrap">Наставничество 6 месяцев</span>
             </div>
-            <div className="flex items-center gap-1.5 sm:gap-2 text-white">
-              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <div className="feature-item flex items-center gap-2 sm:gap-3 bg-white/5 backdrop-blur-sm px-4 sm:px-5 py-2 sm:py-3 rounded-full border border-purple-500/30">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-xs sm:text-sm md:text-base whitespace-nowrap">Реальные сделки</span>
+              <span className="text-sm sm:text-base md:text-lg font-semibold text-white whitespace-nowrap">Реальные сделки</span>
             </div>
-            <div className="flex items-center gap-1.5 sm:gap-2 text-white">
-              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <div className="feature-item flex items-center gap-2 sm:gap-3 bg-white/5 backdrop-blur-sm px-4 sm:px-5 py-2 sm:py-3 rounded-full border border-purple-500/30">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="text-xs sm:text-sm md:text-base whitespace-nowrap">10 лидов от агентства</span>
+              <span className="text-sm sm:text-base md:text-lg font-semibold text-white whitespace-nowrap">10 лидов от агентства</span>
             </div>
           </div>
         </div>
 
-        {/* CTA Button at bottom */}
-        <div className="mt-6 sm:mt-8 flex justify-center animate-scale-in px-4" style={{ animationDelay: '0.6s' }}>
+        {/* CTA Button with glow effect */}
+        <div className="mt-10 sm:mt-12 flex justify-center px-4 hero-subtitle" style={{ animationDelay: '0.8s' }}>
           <button
             onClick={() => {
               document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
             }}
-            className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white text-base sm:text-lg font-semibold hover:bg-white/20 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl uppercase"
+            className="btn-glow w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-xl text-white text-base sm:text-lg md:text-xl font-bold transition-all duration-300 hover:scale-105 uppercase"
           >
             Получи бесплатную консультацию
           </button>
