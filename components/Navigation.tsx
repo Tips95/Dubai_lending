@@ -96,15 +96,17 @@ export default function Navigation() {
             >
               Заработок
             </Link>
-            <button
-              onClick={() => {
-                setIsMobileMenuOpen(false)
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-              }}
-              className="w-full mx-4 px-6 py-2.5 bg-white text-black rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-            >
-              Записаться
-            </button>
+            <div className="px-4">
+              <button
+                onClick={() => {
+                  setIsMobileMenuOpen(false)
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+                }}
+                className="w-full px-6 py-3 bg-white text-black rounded-lg hover:bg-gray-100 transition-colors font-semibold text-base"
+              >
+                Записаться
+              </button>
+            </div>
           </div>
         )}
       </div>

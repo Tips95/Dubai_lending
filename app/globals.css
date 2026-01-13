@@ -87,6 +87,57 @@
 }
 
 @layer utilities {
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    .container-custom {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  /* Prevent text zoom on iOS */
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+
+  /* Touch-friendly buttons */
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  /* Minimum touch target size (WCAG AAA) */
+  button,
+  a[role="button"],
+  input[type="submit"],
+  input[type="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Improve scrolling performance on mobile */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Responsive images */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Tablet optimization */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .container-custom {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
   .text-balance {
     text-wrap: balance;
   }
@@ -611,6 +662,35 @@
     75% {
       transform: translate(40px, -50px) scale(1.2);
       opacity: 0.7;
+    }
+  }
+
+  /* Mobile optimization for very small screens */
+  @media (max-width: 380px) {
+    h1 {
+      font-size: clamp(1.75rem, 8vw, 2.5rem) !important;
+    }
+    
+    h2 {
+      font-size: clamp(1.5rem, 6vw, 2rem) !important;
+    }
+    
+    .btn-glow {
+      font-size: 0.875rem !important;
+      padding: 0.875rem 1.5rem !important;
+    }
+  }
+
+  /* Landscape mode for mobile devices */
+  @media (max-height: 500px) and (orientation: landscape) {
+    .section-padding {
+      padding-top: 2rem !important;
+      padding-bottom: 2rem !important;
+    }
+    
+    section.min-h-screen {
+      min-height: auto !important;
+      padding: 2rem 0 !important;
     }
   }
 
