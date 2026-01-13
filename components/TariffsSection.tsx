@@ -134,7 +134,7 @@ export default function TariffsSection() {
           ref={cardAnimation.ref as React.RefObject<HTMLDivElement>}
           className={`max-w-4xl mx-auto section-transition ${cardAnimation.isVisible ? 'is-visible' : ''}`}
         >
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 overflow-hidden shadow-2xl">
+            <div className="card-3d bg-white/5 backdrop-blur-sm rounded-3xl border border-white/10 overflow-hidden shadow-2xl">
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-6 sm:p-8 md:p-10 text-white">
               <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold mb-3 tracking-tight leading-tight">{currentTariff.title}</h3>
               <div className="flex items-baseline gap-3">

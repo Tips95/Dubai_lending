@@ -59,22 +59,22 @@ export default function BenefitsSection() {
 
         <div 
           ref={cardsAnimation.ref as React.RefObject<HTMLDivElement>}
-          className={`grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-7 stagger-animation ${cardsAnimation.isVisible ? 'is-visible' : ''}`}
+          className={`grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6 lg:gap-7 stagger-animation ${cardsAnimation.isVisible ? 'is-visible' : ''}`}
         >
           {keyBenefits.map((benefit, index) => (
             <div
               key={index}
-              className="gradient-border bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-7 border border-white/10 transition-all hover:bg-white/10 group"
+              className="card-3d gradient-border bg-white/5 backdrop-blur-sm rounded-2xl p-5 sm:p-6 lg:p-7 border border-white/10 transition-all hover:bg-white/10 group flex flex-col min-h-[280px] sm:min-h-[300px]"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 flex-shrink-0 group-hover:scale-110 transition-transform">
                 <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
               </div>
-              <h3 className="text-lg sm:text-xl md:text-2xl font-heading font-bold text-white mb-3 uppercase tracking-tight leading-tight">
+              <h3 className="text-base sm:text-lg lg:text-xl font-heading font-bold text-white mb-3 uppercase tracking-tight leading-tight break-words hyphens-auto">
                 {benefit.title}
               </h3>
-              <p className="text-sm sm:text-base md:text-lg text-gray-200 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-200 leading-relaxed break-words flex-grow">
                 {benefit.description}
               </p>
             </div>

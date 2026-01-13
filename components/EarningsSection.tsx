@@ -1,6 +1,7 @@
 'use client'
 
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import CountUpAnimation from '@/components/CountUpAnimation'
 
 export default function EarningsSection() {
   const titleAnimation = useScrollAnimation({ threshold: 0.2 })
@@ -62,10 +63,10 @@ export default function EarningsSection() {
           {earnings.map((item, index) => (
             <div
               key={index}
-              className="gradient-border bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 transition-all hover:bg-white/10"
+              className="card-3d gradient-border bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-white/10 transition-all hover:bg-white/10"
             >
               <h3 className="text-lg sm:text-xl md:text-2xl font-heading font-bold text-white mb-3 uppercase tracking-tight">{item.type}</h3>
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text-purple-pink mb-2">{item.range}</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text-animated mb-2">{item.range}</div>
               <p className="text-gray-200 text-sm sm:text-base leading-relaxed">{item.average}</p>
             </div>
           ))}

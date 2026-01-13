@@ -47,8 +47,8 @@ export default function Hero() {
             БРОКЕР-ТУР В ДУБАЙ
           </h1>
           
-          {/* Sub-headline with gradient */}
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold gradient-text-purple-pink animate-slide-up uppercase px-2 tracking-tight mt-1 sm:mt-2">
+          {/* Sub-headline with animated gradient */}
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-extrabold gradient-text-animated animate-slide-up uppercase px-2 tracking-tight mt-1 sm:mt-2">
             СТАНЬ УСПЕШНЫМ БРОКЕРОМ!
           </h2>
 

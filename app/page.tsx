@@ -11,12 +11,14 @@ import ContactSection from '@/components/ContactSection'
 import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
 import FloatingParticles from '@/components/FloatingParticles'
+import AnimatedBlobs from '@/components/AnimatedBlobs'
 import ThemeToggle from '@/components/ThemeToggle'
 
 export default function Home() {
   return (
     <main className="min-h-screen animated-gradient-bg relative z-10">
       <FloatingParticles />
+      <AnimatedBlobs />
       <Navigation />
       {/* <ThemeToggle /> */}
       <Hero />

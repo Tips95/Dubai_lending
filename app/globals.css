@@ -62,6 +62,20 @@
   p {
     line-height: 1.7;
     letter-spacing: -0.005em;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .break-words {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  
+  .hyphens-auto {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
   }
   
   /* Improved focus states for accessibility */
@@ -146,13 +160,220 @@
     transform: translateY(-2px);
   }
   
+  /* Animated Blobs */
+  .blob {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    background: linear-gradient(45deg, #a855f7, #ec4899, #8b5cf6);
+    filter: blur(40px);
+    opacity: 0.3;
+    animation: blobMorph 20s ease-in-out infinite;
+    transition: transform 0.3s ease-out;
+  }
+
+  .blob-1 {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .blob-2 {
+    top: 50%;
+    right: 10%;
+    animation-delay: 7s;
+  }
+
+  .blob-3 {
+    bottom: 10%;
+    left: 50%;
+    animation-delay: 14s;
+  }
+
+  @keyframes blobMorph {
+    0%, 100% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      transform: rotate(0deg) scale(1);
+    }
+    25% {
+      border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+      transform: rotate(90deg) scale(1.1);
+    }
+    50% {
+      border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+      transform: rotate(180deg) scale(0.9);
+    }
+    75% {
+      border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+      transform: rotate(270deg) scale(1.05);
+    }
+  }
+
+  /* Geometric Shapes */
+  .geometric-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .shape {
+    position: absolute;
+    opacity: 0.15;
+    animation: float 20s ease-in-out infinite;
+  }
+
+  .shape-1 {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 80%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation-duration: 15s;
+    animation-delay: 0s;
+  }
+
+  .shape-2 {
+    width: 80px;
+    height: 80px;
+    top: 60%;
+    left: 10%;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    border-radius: 50%;
+    animation-duration: 18s;
+    animation-delay: 3s;
+  }
+
+  .shape-3 {
+    width: 120px;
+    height: 120px;
+    top: 40%;
+    right: 20%;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    animation-duration: 22s;
+    animation-delay: 6s;
+  }
+
+  .shape-4 {
+    width: 90px;
+    height: 90px;
+    bottom: 20%;
+    right: 40%;
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    transform: rotate(45deg);
+    animation-duration: 20s;
+    animation-delay: 9s;
+  }
+
+  .shape-5 {
+    width: 70px;
+    height: 70px;
+    top: 80%;
+    left: 60%;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    animation-duration: 17s;
+    animation-delay: 12s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.15;
+    }
+    25% {
+      transform: translateY(-30px) rotate(90deg);
+      opacity: 0.25;
+    }
+    50% {
+      transform: translateY(-60px) rotate(180deg);
+      opacity: 0.15;
+    }
+    75% {
+      transform: translateY(-30px) rotate(270deg);
+      opacity: 0.2;
+    }
+  }
+
+  /* 3D Card Flip Effect */
+  .card-3d {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-3d:hover {
+    transform: rotateY(5deg) rotateX(5deg) scale(1.02);
+  }
+
+  /* Magnetic effect on hover */
+  .magnetic {
+    transition: transform 0.2s ease-out;
+  }
+
+  /* Text reveal animation */
+  .text-reveal {
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  .text-reveal span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: revealText 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .text-reveal.is-visible span {
+    animation-play-state: running;
+  }
+
+  .text-reveal span:nth-child(1) { animation-delay: 0.1s; }
+  .text-reveal span:nth-child(2) { animation-delay: 0.15s; }
+  .text-reveal span:nth-child(3) { animation-delay: 0.2s; }
+  .text-reveal span:nth-child(4) { animation-delay: 0.25s; }
+  .text-reveal span:nth-child(5) { animation-delay: 0.3s; }
+
+  @keyframes revealText {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Gradient text animation */
+  .gradient-text-animated {
+    background: linear-gradient(
+      90deg,
+      #a855f7 0%,
+      #ec4899 25%,
+      #8b5cf6 50%,
+      #a855f7 75%,
+      #ec4899 100%
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShine 3s linear infinite;
+  }
+
+  @keyframes gradientShine {
+    to {
+      background-position: 200% center;
+    }
+  }
+
   /* Reduced motion support */
   @media (prefers-reduced-motion: reduce) {
     .gradient-border,
     .gradient-border::before,
     .gradient-border::after,
     .section-transition,
-    .stagger-animation > * {
+    .stagger-animation > *,
+    .blob,
+    .shape,
+    .card-3d,
+    .gradient-text-animated {
       transition: none !important;
       animation: none !important;
     }
