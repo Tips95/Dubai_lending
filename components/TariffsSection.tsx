@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 export default function TariffsSection() {
-  const [selectedTariff, setSelectedTariff] = useState<'week' | 'month' | 'vip'>('week')
+  const [selectedTariff, setSelectedTariff] = useState<'week' | 'vip'>('week')
   const titleAnimation = useScrollAnimation({ threshold: 0.2 })
   const cardAnimation = useScrollAnimation({ threshold: 0.1, delay: 200 })
 
@@ -30,32 +30,9 @@ export default function TariffsSection() {
         'Сертификат о прохождении обучения',
       ],
     },
-    month: {
-      title: 'Брокер-Тур на месяц',
-      price: '500 000',
-      period: 'месяц',
-      features: [
-        'Поездка в Дубай на месяц',
-        'Проживание и трансфер в Дубае',
-        'VIP онлайн курс за 180 000 ₽ (бонус)',
-        'Доступ в клуб "Успешный брокер" на 6 месяцев (бонус)',
-        'Личное наставничество от Беслана Терекбаева (6 месяцев)',
-        'Знакомство с топ-менеджерами застройщиков',
-        'Тренинги по продажам, SMM, съемке, ораторству',
-        'Профессиональный контент для личного бренда',
-        'Съемка подкаста',
-        'Персональный сайт',
-        'Доступ к платформе поиска недвижимости (6 месяцев)',
-        '10 лидов от агентства StepDream',
-        'Путешествие по персидскому заливу на корабле',
-        'Сертификат о прохождении обучения',
-        'Расширенная программа обучения',
-        'Больше времени на практику',
-      ],
-    },
     vip: {
       title: 'ВИП с поддержкой куратора',
-      price: '179 990',
+      price: '180 000',
       period: 'онлайн',
       features: [
         '18 модулей обучения на платформе',
@@ -108,16 +85,6 @@ export default function TariffsSection() {
             Неделя - 200 000 ₽
           </button>
           <button
-            onClick={() => setSelectedTariff('month')}
-            className={`w-full sm:w-auto px-7 sm:px-9 py-4 sm:py-5 rounded-2xl font-bold transition-all text-base sm:text-lg ${
-              selectedTariff === 'month'
-                ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-2xl scale-105'
-                : 'bg-white/10 text-white hover:bg-white/20 border border-white/20 hover:scale-105'
-            }`}
-          >
-            Месяц - 500 000 ₽
-          </button>
-          <button
             onClick={() => setSelectedTariff('vip')}
             className={`w-full sm:w-auto px-7 sm:px-9 py-4 sm:py-5 rounded-2xl font-bold transition-all text-base sm:text-lg ${
               selectedTariff === 'vip'
@@ -125,7 +92,7 @@ export default function TariffsSection() {
                 : 'bg-white/10 text-white hover:bg-white/20 border border-white/20 hover:scale-105'
             }`}
           >
-            ВИП онлайн - 179 990 ₽
+            ВИП онлайн - 180 000 ₽
           </button>
         </div>
 

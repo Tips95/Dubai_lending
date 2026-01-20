@@ -43,8 +43,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg sm:text-xl mb-2">Телефон</h3>
-                  <a href="tel:+971503506009" className="text-base sm:text-lg text-purple-400 hover:text-pink-400 transition-colors font-semibold">
-                    +971 50 350 60 09
+                  <a href="tel:+971552836575" className="text-base sm:text-lg text-purple-400 hover:text-pink-400 transition-colors font-semibold">
+                    +971 55 283 6575
                   </a>
                 </div>
               </div>
@@ -57,8 +57,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg sm:text-xl mb-2">Email</h3>
-                  <a href="mailto:info@stepdream.ae" className="text-base sm:text-lg text-purple-400 hover:text-pink-400 transition-colors font-semibold break-all">
-                    info@stepdream.ae
+                  <a href="mailto:academystepdream@gmail.com" className="text-base sm:text-lg text-purple-400 hover:text-pink-400 transition-colors font-semibold break-all">
+                    academystepdream@gmail.com
                   </a>
                 </div>
               </div>
@@ -86,7 +86,7 @@ export default function ContactSection() {
               <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-5 font-semibold">Мы в социальных сетях:</p>
               <div className="flex gap-4 sm:gap-5">
                 <a
-                  href="https://wa.me/971503506009"
+                  href="https://wa.me/971552836575"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 sm:w-14 sm:h-14 bg-white/10 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 rounded-xl flex items-center justify-center transition-all hover:scale-110 shadow-lg"

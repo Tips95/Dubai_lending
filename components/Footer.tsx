@@ -45,13 +45,13 @@ export default function Footer() {
               <li>Dubai Hills Estate, Park Heights Square 1</li>
               <li>6th Floor – Dubai, UAE</li>
               <li>
-                <a href="tel:+971503506009" className="hover:text-purple-400 transition-colors break-all">
-                  +971 50 350 60 09
+                <a href="tel:+971552836575" className="hover:text-purple-400 transition-colors break-all">
+                  +971 55 283 6575
                 </a>
               </li>
               <li>
-                <a href="mailto:info@stepdream.ae" className="hover:text-purple-400 transition-colors break-all">
-                  info@stepdream.ae
+                <a href="mailto:academystepdream@gmail.com" className="hover:text-purple-400 transition-colors break-all">
+                  academystepdream@gmail.com
                 </a>
               </li>
             </ul>
